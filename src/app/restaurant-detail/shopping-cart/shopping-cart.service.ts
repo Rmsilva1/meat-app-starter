@@ -1,5 +1,5 @@
-import { CartItem } from "app/restaurant-detail/shopping-cart/cart-item.model";
-import { MenuItem } from "app/restaurant-detail/menu-item/menu-item.model";
+import { CartItem } from 'app/restaurant-detail/shopping-cart/cart-item.model';
+import { MenuItem } from 'app/restaurant-detail/menu-item/menu-item.model';
 
 export class ShoppingCartService {
     items: CartItem[] = [];
@@ -9,11 +9,11 @@ export class ShoppingCartService {
     }
 
     addItem(item: MenuItem) {
-        let foundItem = this.items.find((mItem) => mItem.menuItem.id === item.id);
+        let foundItem = this.items.find((mItem) => mItem.menuItem.id === item.id)
         if (foundItem) {
             foundItem.quantity = foundItem.quantity + 1;
         } else {
-            this.items.push(new CartItem(item));
+            this.items.push(new CartItem(item))
         }
     }
 
