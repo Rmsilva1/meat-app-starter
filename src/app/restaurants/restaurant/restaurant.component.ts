@@ -8,8 +8,8 @@ import { Restaurant } from 'app/restaurants/restaurant/restaurant.model';
 export class RestaurantComponent implements OnInit {
 
   @Input() restaurant: Restaurant;
-  
-  constructor() {}
+
+  constructor() { }
 
   ngOnInit() {
   }
